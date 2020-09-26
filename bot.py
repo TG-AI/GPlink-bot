@@ -19,16 +19,16 @@ bot = Client('gplink bot',
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm GPlink bot. Just send me link and get short link"
-        "**Join my update [channel](https://t.me/AI_bot_projects)**")
+        "I'm GPlink bot. Just send me link and get short link\n\/help for more details"
+        "**Join my [update channel](https://t.me/AI_bot_projects)**")
       
       
 @bot.on_message(filters.command('help') & filters.private)
 async def start(bot, message):
     await message.reply(
         f"**Hello {message.chat.first_name}!**\n\n"
-        "Send me any vaid url I will give you the short link"
-        "🙏**Please don't use my service for any illegal purpose\n\nI will ban you**😁")
+        "Send me any vaid url I will give you the short link\n\n"
+        "🙏**Please don't use my service for any illegal purpose\n\nI will ban you**😁\n\nJoin my [support group](https://t.me/AI_BOT_HELP)")
 
 
 @bot.on_message(filters.regex(r'https?://[^\s]+') & filters.private)
@@ -36,7 +36,7 @@ async def link_handler(bot, message):
     link = message.matches[0].group(0)
     try:
         short_link = await get_shortlink(link)
-        await message.reply(f'Here is your [short link]({short_link})', quote=True)
+        await message.reply(f'Here is your [short link]({short_link})\n\n©️ @gplink_byAI_bot', quote=True)
     except Exception as e:
         await message.reply(f'Error: {e}', quote=True)
 
