@@ -19,7 +19,7 @@ bot = Client('gplink bot',
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm GPlink bot. Just send me link and get short link\n\n/help for more details"
+        "I'm GPlink bot. Just send me link and get short link\n\n/help for more details\n\n"
         "**Join my [update channel](https://t.me/AI_bot_projects)**")
       
       
