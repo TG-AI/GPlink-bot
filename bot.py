@@ -20,7 +20,7 @@ async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
         "I'm GPlink bot. Just send me link and get short link"
-        "**Join my update [channel](https://t.me/AI_bot_projects)**)
+        "**Join my update [channel](https://t.me/AI_bot_projects)**")
       
       
 @bot.on_message(filters.command('help') & filters.private)
@@ -28,7 +28,7 @@ async def start(bot, message):
     await message.reply(
         f"**Hello {message.chat.first_name}!**\n\n"
         "Send me any vaid url I will give you the short link"
-        "🙏**Please don't use my service for any illegal purpose\n\nI will ban you**😁)
+        "🙏**Please don't use my service for any illegal purpose\n\nI will ban you**😁")
 
 
 @bot.on_message(filters.regex(r'https?://[^\s]+') & filters.private)
