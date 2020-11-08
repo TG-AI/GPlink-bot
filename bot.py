@@ -1,5 +1,5 @@
 # import pyshorteners
-from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, 
+from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import requests
 import json
