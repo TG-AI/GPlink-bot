@@ -13,8 +13,10 @@ import aiohttp
 BOT_TOKEN = environ.get('BOT_TOKEN')
 def start(update, context):
 
-    text = "<b>Hi {update.message.from_user.first_name}!<\b>\n\nI'm Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n<b>Join my  <a href=https://t.me/Golinksrt/update channel</a><\b>"
-    update.message.reply_text(text, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+    update.message.reply_text( f"Hi {update.message.from_user.first_name}!<\b>\n\n
+        "I'm Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n"
+        "Join my [update channel](https://t.me/Golinksrt/)"
+    parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
 def help_command(update, context):
 
