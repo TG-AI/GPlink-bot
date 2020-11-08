@@ -3,7 +3,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import requests
 import json
 import re
-from gplink_tokens import tokens
+from golink_tokens import tokens
 from os import environ
 import aiohttp
 
