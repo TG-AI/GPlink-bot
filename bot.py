@@ -21,7 +21,7 @@ def help_command(update, context):
 
     update.message.reply_text("**Hello {update.message.from_user.first_name}!**\n\n"
         "Send me any valid url I will give you the short link\n\n"
-        "🙏**Register [Golinksrt](https://golinksrt.xyz/auth/signup)\n\nEARN MONEY**\n\nJoin my [support channel](https://t.me/Golinksrt)")
+        "🙏**Register [Golinksrt](https://golinksrt.xyz/auth/signup)\n\nEARN MONEY**\n\nJoin my [support channel](https://t.me/Golinksrt)", parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 
 def echo(update, context):
