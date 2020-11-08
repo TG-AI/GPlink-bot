@@ -13,14 +13,14 @@ BOT_TOKEN = environ.get('BOT_TOKEN')
 def start(update, context):
 
     update.message.reply_text(
-        f"**Hi {update.message.from_user.first_name}!**\n\n"
+        f"<b>Hi {update.message.from_user.first_name}!<\b>\n\n"
         "I'm Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n"
-        "**Join my [update channel](https://t.me/Golinksrt)**")
+        "<b>Join my  <a href="https://t.me/Golinksrt/"update channel</a><\b>")
 
 
 def help_command(update, context):
 
-    update.message.reply_text("**Hello {message.chat.first_name}!**\n\n"
+    update.message.reply_text("**Hello {update.message.from_user.first_name}!**\n\n"
         "Send me any valid url I will give you the short link\n\n"
         "🙏**Register [Golinksrt](https://golinksrt.xyz/auth/signup)\n\nEARN MONEY**\n\nJoin my [support channel](https://t.me/Golinksrt)")
 
