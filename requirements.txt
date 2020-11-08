@@ -1,3 +1,7 @@
 pyrogram
 tgcrypto
 aiohttp
+python-telegram-bot
+urllib3
+requests
+
