@@ -13,7 +13,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN')
 def start(update, context):
 
     update.message.reply_text(
-        f"**Hi {message.chat.first_name}!**\n\n"
+        f"**Hi {update.message.from_user.first_name}!**\n\n"
         "I'm Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n"
         "**Join my [update channel](https://t.me/Golinksrt)**")
 
