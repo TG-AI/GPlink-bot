@@ -16,7 +16,7 @@ def start(update, context):
     update.message.reply_text(
         f"<b>Hi {update.message.from_user.first_name}!<\b>\n\n"
         "I'm Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n"
-        "<b>Join my  <a href="https://t.me/Golinksrt/"update channel</a><\b>"
+        "<b>Join my  <a href=https://t.me/Golinksrt/update channel</a><\b>"
 
 
 def help_command(update, context):
