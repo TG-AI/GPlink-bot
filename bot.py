@@ -15,7 +15,7 @@ def start(update, context):
 
     update.message.reply_text("Hi {update.message.from_user.first_name}!\n\n"
         "I'm Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n"
-        "Join my [update channel](https://t.me/Golinksrt/)"parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+        "Join my [update channel](https://t.me/Golinksrt/)", parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 def help_command(update, context):
 
