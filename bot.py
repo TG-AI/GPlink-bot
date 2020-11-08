@@ -1,43 +1,28 @@
-from os import environ
-import aiohttp
-from pyrogram import Client, filters
-
-API_ID = environ.get('API_ID')
-API_HASH = environ.get('API_HASH')
-BOT_TOKEN = environ.get('BOT_TOKEN')
-API_KEY = environ.get('API_KEY', '5fd20df0c4db85798dd4f5ff3d03e3606a94f98b')
-
-bot = Client('golink bot',
-             api_id=API_ID,
-             api_hash=API_HASH,
-             bot_token=BOT_TOKEN,
-             workers=50,
-             sleep_threshold=10)
-
-
-@bot.on_message(filters.command('start') & filters.private)
-async def start(bot, message):
-    await message.reply(
-        f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n"
-        "**Join my [update channel](https://t.me/Golinksrt)**")
-      
-      
-@bot.on_message(filters.command('help') & filters.private)
-async def start(bot, message):
-    await message.reply(
-        f"**Hello {message.chat.first_name}!**\n\n"
-        "Send me any valid url I will give you the short link\n\n"
-        "🙏**Register [Golinksrt](https://golinksrt.xyz/auth/signup)\n\nEARN MONEY**\n\nJoin my [support channel](https://t.me/Golinksrt)")
-    
+# import pyshorteners
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import requests
 import json
 import re
-from golink_tokens import tokens
+from gplink_tokens import tokens
 from os import environ
 import aiohttp
 
+
+
+BOT_TOKEN = environ.get('BOT_TOKEN')
+def start(update, context):
+
+    update.message.reply_text(
+        f"**Hi {message.chat.first_name}!**\n\n"
+        "I'm Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n"
+        "**Join my [update channel](https://t.me/Golinksrt)**")
+
+
+def help_command(update, context):
+
+    update.message.reply_text("**Hello {message.chat.first_name}!**\n\n"
+        "Send me any valid url I will give you the short link\n\n"
+        "🙏**Register [Golinksrt](https://golinksrt.xyz/auth/signup)\n\nEARN MONEY**\n\nJoin my [support channel](https://t.me/Golinksrt)")
 
 
 def echo(update, context):
@@ -72,6 +57,13 @@ def main():
         BOT_TOKEN, use_context=True)
 
     dp = updater.dispatcher
+      
+    
+    dp = updater.dispatcher
+
+    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("help", help_command))
+  
 
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, echo))
     updater.start_polling()
