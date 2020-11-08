@@ -14,8 +14,8 @@ BOT_TOKEN = environ.get('BOT_TOKEN')
 def start(update, context):
 
     text = "<b>Hi {update.message.from_user.first_name}!<\b>\n\n"
-           "I'm Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n"
-            "<b>Join my  <a href=https://t.me/Golinksrt/update channel</a><\b>"
+           "I\'m Golinksrt bot. Just send me link and get short link\n\n/help for more details\n\n"
+           "<b>Join my  <a href=https://t.me/Golinksrt/update channel</a><\b>"
     update.message.reply_text(text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 def help_command(update, context):
