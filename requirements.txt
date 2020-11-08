@@ -1,5 +1,4 @@
-pyrogram
-tgcrypto
+telegram
 aiohttp
 python-telegram-bot
 urllib3
